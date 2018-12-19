@@ -135,6 +135,7 @@
                                         </button>
                                     </div>
                                 </div>
+
                                 <div class="block-content">
                                     <p>Potenti elit lectus augue eget iaculis vitae etiam.</p>
                                     <div class="form-group">

@@ -86,6 +86,7 @@ MAIN CONTENT LAYOUT
     <aside id="side-overlay">
         <!-- Side Header -->
         <div class="bg-image" style="background-image: url('{{ asset('media/various/bg_side_overlay_header.jpg') }}');">
+
             <div class="bg-primary-op">
                 <div class="content-header">
                     <!-- User Avatar -->

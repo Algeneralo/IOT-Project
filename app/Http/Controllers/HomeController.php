@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $devices = Devices::where("user_id", Auth::id())->get();
+        $devices = Devices::where("user_id", Auth::id())->get(); 
         return view('home', compact('devices'));
     }
 }
