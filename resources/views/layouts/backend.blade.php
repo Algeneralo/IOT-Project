@@ -163,92 +163,92 @@ MAIN CONTENT LAYOUT
         <div class="content-side content-side-full">
             <ul class="nav-main">
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="/home">
+                    <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="{{url("/home")}}">
                         <i class="nav-main-link-icon fa fa-paper-plane"></i>
                         <span class="nav-main-link-name">Overview</span>
                         <span class="nav-main-link-badge badge badge-pill badge-success">5</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">My Devices</li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/device">
-                        <i class="nav-main-link-icon fa fa-heartbeat"></i>
-                        <span class="nav-main-link-name">Live Status</span>
-                    </a>
-                </li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/home">
-                        <i class="nav-main-link-icon fa fa-server"></i>
-                        <span class="nav-main-link-name">My Servers</span>
-                    </a>
-                </li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/home">
-                        <i class="nav-main-link-icon fa fa-desktop"></i>
-                        <span class="nav-main-link-name">Server Logs</span>
-                    </a>
-                </li>
-                <li class="nav-main-heading">Device Setup</li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="">
-                        <i class="nav-main-link-icon fa fa-list-alt"></i>
-                        <span class="nav-main-link-name">Manage Devices</span>
-                    </a>
-                </li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/configurator">
-                        <i class="nav-main-link-icon fa fa-plus-square"></i>
-                        <span class="nav-main-link-name">Add Device</span>
-                    </a>
-                </li>
-                <li class="nav-main-heading">Tools</li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/mqtt">
-                        <i class="nav-main-link-icon fa fa-server"></i>
-                        <span class="nav-main-link-name">MQTT Client Tool</span>
-                    </a>
-                </li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/schedule">
-                        <i class="nav-main-link-icon fa fa-beer"></i>
-                        <span class="nav-main-link-name">Example Schedule</span>
-                    </a>
-                </li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/calendar">
-                        <i class="nav-main-link-icon fa fa-calendar-alt"></i>
-                        <span class="nav-main-link-name">Sample Calendar</span>
-                    </a>
-                </li>
-                <li class="nav-main-heading">More</li>
-                <li class="nav-main-item open">
-                    <a class="nav-main-link" href="/">
-                        <i class="nav-main-link-icon fa fa-lemon"></i>
-                        <span class="nav-main-link-name">Landing</span>
-                    </a>
-                </li>
-                <li class="nav-main-heading">Temp Pages</li>
-                <li class="nav-main-item{{ request()->is('examples/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                       aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon fa fa-lightbulb"></i>
-                        <span class="nav-main-link-name">Examples</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('examples/plugin') ? ' active' : '' }}"
-                               href="/examples/plugin">
-                                <span class="nav-main-link-name">Plugin</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('examples/blank') ? ' active' : '' }}"
-                               href="/examples/blank">
-                                <span class="nav-main-link-name">Blank</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                {{--<li class="nav-main-heading">My Devices</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/device">--}}
+                        {{--<i class="nav-main-link-icon fa fa-heartbeat"></i>--}}
+                        {{--<span class="nav-main-link-name">Live Status</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/home">--}}
+                        {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
+                        {{--<span class="nav-main-link-name">My Servers</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/home">--}}
+                        {{--<i class="nav-main-link-icon fa fa-desktop"></i>--}}
+                        {{--<span class="nav-main-link-name">Server Logs</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-heading">Device Setup</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="">--}}
+                        {{--<i class="nav-main-link-icon fa fa-list-alt"></i>--}}
+                        {{--<span class="nav-main-link-name">Manage Devices</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/configurator">--}}
+                        {{--<i class="nav-main-link-icon fa fa-plus-square"></i>--}}
+                        {{--<span class="nav-main-link-name">Add Device</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-heading">Tools</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/mqtt">--}}
+                        {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
+                        {{--<span class="nav-main-link-name">MQTT Client Tool</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/schedule">--}}
+                        {{--<i class="nav-main-link-icon fa fa-beer"></i>--}}
+                        {{--<span class="nav-main-link-name">Example Schedule</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/calendar">--}}
+                        {{--<i class="nav-main-link-icon fa fa-calendar-alt"></i>--}}
+                        {{--<span class="nav-main-link-name">Sample Calendar</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-heading">More</li>--}}
+                {{--<li class="nav-main-item open">--}}
+                    {{--<a class="nav-main-link" href="/">--}}
+                        {{--<i class="nav-main-link-icon fa fa-lemon"></i>--}}
+                        {{--<span class="nav-main-link-name">Landing</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-heading">Temp Pages</li>--}}
+                {{--<li class="nav-main-item{{ request()->is('examples/*') ? ' open' : '' }}">--}}
+                    {{--<a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"--}}
+                       {{--aria-expanded="true" href="#">--}}
+                        {{--<i class="nav-main-link-icon fa fa-lightbulb"></i>--}}
+                        {{--<span class="nav-main-link-name">Examples</span>--}}
+                    {{--</a>--}}
+                    {{--<ul class="nav-main-submenu">--}}
+                        {{--<li class="nav-main-item">--}}
+                            {{--<a class="nav-main-link{{ request()->is('examples/plugin') ? ' active' : '' }}"--}}
+                               {{--href="/examples/plugin">--}}
+                                {{--<span class="nav-main-link-name">Plugin</span>--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li class="nav-main-item">--}}
+                            {{--<a class="nav-main-link{{ request()->is('examples/blank') ? ' active' : '' }}"--}}
+                               {{--href="/examples/blank">--}}
+                                {{--<span class="nav-main-link-name">Blank</span>--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
             </ul>
         </div>
         <!-- END Side Navigation -->
@@ -300,23 +300,23 @@ MAIN CONTENT LAYOUT
                                 User Options
                             </div>
                             <div class="p-2">
-                                <a class="dropdown-item" href="/profile">
+                                <a class="dropdown-item" href="{{url('/profile')}}">
                                     <i class="far fa-fw fa-user mr-1"></i> Profile
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center justify-content-between"
-                                   href="javascript:void(0)">
-                                    <span><i class="far fa-fw fa-bell mr-1"></i> Notifications</span>
-                                    <span class="badge badge-primary">3</span>
-                                </a>
+                                {{--<a class="dropdown-item d-flex align-items-center justify-content-between"--}}
+                                {{--href="javascript:void(0)">--}}
+                                {{--<span><i class="far fa-fw fa-bell mr-1"></i> Notifications</span>--}}
+                                {{--<span class="badge badge-primary">3</span>--}}
+                                {{--</a>--}}
                                 <div role="separator" class="dropdown-divider"></div>
 
                                 <!-- Toggle Side Overlay -->
                                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                                <a class="dropdown-item" href="javascript:void(0)" data-toggle="layout"
-                                   data-action="side_overlay_toggle">
-                                    <i class="far fa-fw fa-building mr-1"></i> Settings
-                                </a>
-                                <!-- END Side Overlay -->
+                            {{--<a class="dropdown-item" href="javascript:void(0)" data-toggle="layout"--}}
+                            {{--data-action="side_overlay_toggle">--}}
+                            {{--<i class="far fa-fw fa-building mr-1"></i> Settings--}}
+                            {{--</a>--}}
+                            <!-- END Side Overlay -->
 
                                 <div role="separator" class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -338,72 +338,72 @@ MAIN CONTENT LAYOUT
                     <button type="button" class="btn btn-dual" id="page-header-notifications-dropdown"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-fw fa-bell"></i>
-                        <span class="badge badge-secondary badge-pill">5</span>
+                        <span class="badge badge-secondary badge-pill">0</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                          aria-labelledby="page-header-notifications-dropdown">
                         <div class="bg-primary-darker rounded-top font-w600 text-white text-center p-3">
                             Notifications
                         </div>
-                        <ul class="nav-items my-2">
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mx-3">
-                                        <i class="fa fa-fw fa-check-circle text-success"></i>
-                                    </div>
-                                    <div class="media-body font-size-sm pr-2">
-                                        <div class="font-w600">App was updated to v5.6!</div>
-                                        <div class="text-muted font-italic">3 min ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mx-3">
-                                        <i class="fa fa-fw fa-user-plus text-info"></i>
-                                    </div>
-                                    <div class="media-body font-size-sm pr-2">
-                                        <div class="font-w600">New Subscriber was added! You now have 2580!</div>
-                                        <div class="text-muted font-italic">10 min ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mx-3">
-                                        <i class="fa fa-fw fa-times-circle text-danger"></i>
-                                    </div>
-                                    <div class="media-body font-size-sm pr-2">
-                                        <div class="font-w600">Server backup failed to complete!</div>
-                                        <div class="text-muted font-italic">30 min ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mx-3">
-                                        <i class="fa fa-fw fa-exclamation-circle text-warning"></i>
-                                    </div>
-                                    <div class="media-body font-size-sm pr-2">
-                                        <div class="font-w600">You are running out of space. Please consider upgrading
-                                            your plan.
-                                        </div>
-                                        <div class="text-muted font-italic">1 hour ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="text-dark media py-2" href="javascript:void(0)">
-                                    <div class="mx-3">
-                                        <i class="fa fa-fw fa-plus-circle text-primary"></i>
-                                    </div>
-                                    <div class="media-body font-size-sm pr-2">
-                                        <div class="font-w600">New Sale! + $30</div>
-                                        <div class="text-muted font-italic">2 hours ago</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        {{--<ul class="nav-items my-2">--}}
+                        {{--<li>--}}
+                        {{--<a class="text-dark media py-2" href="javascript:void(0)">--}}
+                        {{--<div class="mx-3">--}}
+                        {{--<i class="fa fa-fw fa-check-circle text-success"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="media-body font-size-sm pr-2">--}}
+                        {{--<div class="font-w600">App was updated to v5.6!</div>--}}
+                        {{--<div class="text-muted font-italic">3 min ago</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                        {{--<a class="text-dark media py-2" href="javascript:void(0)">--}}
+                        {{--<div class="mx-3">--}}
+                        {{--<i class="fa fa-fw fa-user-plus text-info"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="media-body font-size-sm pr-2">--}}
+                        {{--<div class="font-w600">New Subscriber was added! You now have 2580!</div>--}}
+                        {{--<div class="text-muted font-italic">10 min ago</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                        {{--<a class="text-dark media py-2" href="javascript:void(0)">--}}
+                        {{--<div class="mx-3">--}}
+                        {{--<i class="fa fa-fw fa-times-circle text-danger"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="media-body font-size-sm pr-2">--}}
+                        {{--<div class="font-w600">Server backup failed to complete!</div>--}}
+                        {{--<div class="text-muted font-italic">30 min ago</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                        {{--<a class="text-dark media py-2" href="javascript:void(0)">--}}
+                        {{--<div class="mx-3">--}}
+                        {{--<i class="fa fa-fw fa-exclamation-circle text-warning"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="media-body font-size-sm pr-2">--}}
+                        {{--<div class="font-w600">You are running out of space. Please consider upgrading--}}
+                        {{--your plan.--}}
+                        {{--</div>--}}
+                        {{--<div class="text-muted font-italic">1 hour ago</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                        {{--<a class="text-dark media py-2" href="javascript:void(0)">--}}
+                        {{--<div class="mx-3">--}}
+                        {{--<i class="fa fa-fw fa-plus-circle text-primary"></i>--}}
+                        {{--</div>--}}
+                        {{--<div class="media-body font-size-sm pr-2">--}}
+                        {{--<div class="font-w600">New Sale! + $30</div>--}}
+                        {{--<div class="text-muted font-italic">2 hours ago</div>--}}
+                        {{--</div>--}}
+                        {{--</a>--}}
+                        {{--</li>--}}
+                        {{--</ul>--}}
                         <div class="p-2 border-top">
                             <a class="btn btn-light btn-block text-center" href="javascript:void(0)">
                                 <i class="fa fa-fw fa-eye mr-1"></i> View All
@@ -415,10 +415,10 @@ MAIN CONTENT LAYOUT
 
                 <!-- Toggle Side Overlay -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-dual" data-toggle="layout" data-action="side_overlay_toggle">
-                    <i class="far fa-fw fa-list-alt"></i>
-                </button>
-                <!-- END Toggle Side Overlay -->
+            {{--<button type="button" class="btn btn-dual" data-toggle="layout" data-action="side_overlay_toggle">--}}
+            {{--<i class="far fa-fw fa-list-alt"></i>--}}
+            {{--</button>--}}
+            <!-- END Toggle Side Overlay -->
             </div>
             <!-- END Right Section -->
         </div>
@@ -427,7 +427,7 @@ MAIN CONTENT LAYOUT
         <!-- Header Search -->
         <div id="page-header-search" class="overlay-header bg-primary">
             <div class="content-header">
-                <form class="w-100" action="/dashboard" method="post">
+                <form class="w-100" action="{{url('/home')}}" method="post">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
