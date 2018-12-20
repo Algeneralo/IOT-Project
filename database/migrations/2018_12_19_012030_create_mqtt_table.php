@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateMqttTable extends Migration
 {
@@ -15,14 +15,16 @@ class CreateMqttTable extends Migration
     {
         Schema::create('mqtt', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("user_id");
+            $table->integer("user_id")->unsigned();
             $table->string("user");
             $table->string("password");
             $table->string("ip");
             $table->string("port");
-            $table->foreign("user_id")->references('id')->on('users')->onDelete('cascade');;
             $table->timestamps();
             $table->softDeletes();
+        });
+        Schema::table('mqtt', function (Blueprint $table) {
+            $table->foreign("user_id")->references('id')->on('users')->onDelete('cascade');;
         });
     }
 
