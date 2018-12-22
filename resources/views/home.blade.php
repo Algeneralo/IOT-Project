@@ -21,89 +21,41 @@
     <div class="content">
         <!-- Your Block -->
         <div class="row">
-            {{--@foreach($devices as $device)--}}
-            {{--<div class="col-md-6 col-xl-3">--}}
-            {{--<a class="block block-rounded block-link-shadow bg-primary" href="javascript:void(0)">--}}
-            {{--<div class="block-content block-content-full d-flex align-items-center justify-content-between">--}}
-            {{--<div>--}}
-            {{--<i class="fa fa-2x fa-arrow-alt-circle-down text-white-75"></i>--}}
-            {{--</div>--}}
-            {{--<div class="ml-3 text-right">--}}
-            {{--<p class="text-white font-size-h3 font-w300 mb-0">--}}
-            {{--{{$device->name}}--}}
-            {{--</p>--}}
-            {{--<p class="text-white-75 mb-0">--}}
-            {{--{{$device->mac_address}}--}}
-            {{--</p>--}}
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</a>--}}
-            {{--</div>--}}
-            {{--@endforeach--}}
+            @foreach($devices as $device)
+                <div class="col-md-6 col-xl-3">
+                    <a class="block block-rounded block-link-shadow bg-primary" href="{{route('devices.show',$device->id)}}">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <i class="fa fa-2x fa-arrow-alt-circle-down text-white-75"></i>
+                            </div>
+                            <div class="ml-3 text-right">
+                                <p class="text-white font-size-h3 font-w300 mb-0">
+                                    {{$device->name}}
+                                </p>
+                                <p class="text-white-75 mb-0">
+                                    {{$device->mac_address}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+            <div class="col-md-6 col-xl-3">
+                <a class="block block-rounded block-link-pop js-tooltip-enabled" href="{{route('devices.create')}}"
+                   data-toggle="tooltip" data-placement="top" title="" data-original-title="Add New Device..">
+                    <div class="block-content block-content-full d-flex align-items-center">
+                        <div>
+                            <i class="fa fa-2x fa-plus-circle text-secondary"></i>
+                            <p class="text-secondary mb-0">
+                                Add New Device...
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Hover Table -->
-        <div class="block block-rounded block-bordered">
-            <div class="block-header block-header-default">
-                <h3 class="block-title">Devices</h3>
-                <div class="block-options">
-                    <button type="button" class="btn btn-success">
-                        <i class="fa fa-plus"></i> Add New
-                    </button>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xl-4">
-            </div>
-            <div class="block-content">
-                <table class="table table-hover table-vcenter">
-                    <thead>
-                    <tr>
-                        <th class="text-center" style="width: 50px;">#</th>
-                        <th>Name</th>
-                        <th class="text-center" style="width: 125px;">Temp</th>
-                        <th class="text-center" style="width: 100px;">Set</th>
-                        <th class="text-center" style="width: 75px;">Details</th>
-                        <th class="d-none d-sm-table-cell" style="width: 75px;">Status</th>
-                        <th class="text-center" style="width: 100px;">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($devices as $device)
-                        <tr>
-                            <th class="text-center" scope="row">{{$loop->iteration}}</th>
-                            <td class="font-w600">
-                                <a href="">{{$device->name}}</a>
-                            </td>
-                            <td class="font-w600 text-center">
-                                <a href=""><i class="fa fa-arrow-alt-circle-up text-warning"></i> 28°F</a>
-                            </td>
-                            <td class="font-w600 text-center">
-                                <a href="">30°F</a>
-                            </td>
-                            <td class="font-w600 text-center">
-                                <a href="/devices/{{$device->id}}">More...</a>
-                            </td>
-                            <td class="d-none d-sm-table-cell">
-                                <span class="badge badge-success">Online</span>
-                            </td>
-                            <td class="text-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                                            data-target="#modal-block-large" title="Edit">
-                                        <i class="fa fa-pencil-alt"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip"
-                                            title="Delete">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
         <!-- END Hover Table -->
 
         <div class="block block-rounded block-bordered">
@@ -171,8 +123,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input">Hysteresis</label>
-                                        <input type="text" class="form-control form-control-alt col-3 id="
-                                               example-text-input" name="example-text-input" placeholder="Text Input">
+                                        <input type="text" class="form-control form-control-alt col-3"
+                                               id="example-text-input" name="example-text-input"
+                                               placeholder="Text Input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-email-input">Email</label>

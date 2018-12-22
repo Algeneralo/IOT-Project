@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/apple-touch-icon-180x180.png') }}">
 
     <!-- Fonts and Styles -->
-    @yield('css_before')
+    @yield('css')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700">
     <link rel="stylesheet" href="{{ mix('css/dashmix.css') }}">
 
@@ -170,85 +170,79 @@ MAIN CONTENT LAYOUT
                         <span class="nav-main-link-badge badge badge-pill badge-success">5</span>
                     </a>
                 </li>
-                {{--<li class="nav-main-heading">My Devices</li>--}}
+                <li class="nav-main-heading">My Devices</li>
+                <li class="nav-main-item open">
+                    <a class="nav-main-link" href="{{route('devices.index')}}">
+                        <i class="nav-main-link-icon fa fa-list-alt"></i>
+                        <span class="nav-main-link-name">Manage Devices</span>
+                    </a>
+                </li>
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/device">--}}
-                        {{--<i class="nav-main-link-icon fa fa-heartbeat"></i>--}}
-                        {{--<span class="nav-main-link-name">Live Status</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/home">--}}
+                {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
+                {{--<span class="nav-main-link-name">My Servers</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/home">--}}
-                        {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
-                        {{--<span class="nav-main-link-name">My Servers</span>--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/home">--}}
-                        {{--<i class="nav-main-link-icon fa fa-desktop"></i>--}}
-                        {{--<span class="nav-main-link-name">Server Logs</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/home">--}}
+                {{--<i class="nav-main-link-icon fa fa-desktop"></i>--}}
+                {{--<span class="nav-main-link-name">Server Logs</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-heading">Device Setup</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="">--}}
-                        {{--<i class="nav-main-link-icon fa fa-list-alt"></i>--}}
-                        {{--<span class="nav-main-link-name">Manage Devices</span>--}}
-                    {{--</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/configurator">--}}
-                        {{--<i class="nav-main-link-icon fa fa-plus-square"></i>--}}
-                        {{--<span class="nav-main-link-name">Add Device</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/configurator">--}}
+                {{--<i class="nav-main-link-icon fa fa-plus-square"></i>--}}
+                {{--<span class="nav-main-link-name">Add Device</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-heading">Tools</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/mqtt">--}}
-                        {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
-                        {{--<span class="nav-main-link-name">MQTT Client Tool</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/mqtt">--}}
+                {{--<i class="nav-main-link-icon fa fa-server"></i>--}}
+                {{--<span class="nav-main-link-name">MQTT Client Tool</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/schedule">--}}
-                        {{--<i class="nav-main-link-icon fa fa-beer"></i>--}}
-                        {{--<span class="nav-main-link-name">Example Schedule</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/schedule">--}}
+                {{--<i class="nav-main-link-icon fa fa-beer"></i>--}}
+                {{--<span class="nav-main-link-name">Example Schedule</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/calendar">--}}
-                        {{--<i class="nav-main-link-icon fa fa-calendar-alt"></i>--}}
-                        {{--<span class="nav-main-link-name">Sample Calendar</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/calendar">--}}
+                {{--<i class="nav-main-link-icon fa fa-calendar-alt"></i>--}}
+                {{--<span class="nav-main-link-name">Sample Calendar</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-heading">More</li>--}}
                 {{--<li class="nav-main-item open">--}}
-                    {{--<a class="nav-main-link" href="/">--}}
-                        {{--<i class="nav-main-link-icon fa fa-lemon"></i>--}}
-                        {{--<span class="nav-main-link-name">Landing</span>--}}
-                    {{--</a>--}}
+                {{--<a class="nav-main-link" href="/">--}}
+                {{--<i class="nav-main-link-icon fa fa-lemon"></i>--}}
+                {{--<span class="nav-main-link-name">Landing</span>--}}
+                {{--</a>--}}
                 {{--</li>--}}
                 {{--<li class="nav-main-heading">Temp Pages</li>--}}
                 {{--<li class="nav-main-item{{ request()->is('examples/*') ? ' open' : '' }}">--}}
-                    {{--<a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"--}}
-                       {{--aria-expanded="true" href="#">--}}
-                        {{--<i class="nav-main-link-icon fa fa-lightbulb"></i>--}}
-                        {{--<span class="nav-main-link-name">Examples</span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="nav-main-submenu">--}}
-                        {{--<li class="nav-main-item">--}}
-                            {{--<a class="nav-main-link{{ request()->is('examples/plugin') ? ' active' : '' }}"--}}
-                               {{--href="/examples/plugin">--}}
-                                {{--<span class="nav-main-link-name">Plugin</span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                        {{--<li class="nav-main-item">--}}
-                            {{--<a class="nav-main-link{{ request()->is('examples/blank') ? ' active' : '' }}"--}}
-                               {{--href="/examples/blank">--}}
-                                {{--<span class="nav-main-link-name">Blank</span>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
+                {{--<a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"--}}
+                {{--aria-expanded="true" href="#">--}}
+                {{--<i class="nav-main-link-icon fa fa-lightbulb"></i>--}}
+                {{--<span class="nav-main-link-name">Examples</span>--}}
+                {{--</a>--}}
+                {{--<ul class="nav-main-submenu">--}}
+                {{--<li class="nav-main-item">--}}
+                {{--<a class="nav-main-link{{ request()->is('examples/plugin') ? ' active' : '' }}"--}}
+                {{--href="/examples/plugin">--}}
+                {{--<span class="nav-main-link-name">Plugin</span>--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-main-item">--}}
+                {{--<a class="nav-main-link{{ request()->is('examples/blank') ? ' active' : '' }}"--}}
+                {{--href="/examples/blank">--}}
+                {{--<span class="nav-main-link-name">Blank</span>--}}
+                {{--</a>--}}
+                {{--</li>--}}
+                {{--</ul>--}}
                 {{--</li>--}}
             </ul>
         </div>
@@ -490,6 +484,6 @@ MAIN CONTENT LAYOUT
 <!-- Laravel Scaffolding JS -->
 <script src="{{ mix('js/laravel.app.js') }}"></script>
 
-@yield('js_after')
+@yield('js')
 </body>
 </html>

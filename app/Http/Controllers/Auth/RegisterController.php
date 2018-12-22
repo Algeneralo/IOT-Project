@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\MQTT;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -63,13 +64,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             "iot_id" => $this->generateIOTNumber(),
             "isPremium" => '0',
             'password' => Hash::make($data['password']),
         ]);
+            MQTT::create([
+               "user_id"=>$user->id,
+               "user"=>"fsoyuhgt",
+               "password"=>"4RGUx0JxSbDn",
+               "ip"=>"m15.cloudmqtt.com",
+               "port"=>"12060",
+            ]);
+        return $user;
     }
 
     private function generateIOTNumber()
