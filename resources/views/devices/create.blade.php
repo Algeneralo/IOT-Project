@@ -28,15 +28,16 @@
                 <p class="mb-0">Searching for devices!</p>
             </div>
         </div>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+        <div id="searchingNetworkAlert" class="alert alert-warning d-flex align-items-center" role="alert"
+             style="display: none !important;">
+            <div class="flex-00-auto">
+                <i class="fa fa-fw fa-spinner fa-spin"></i>
             </div>
-        @endif
+            <div class="flex-fill ml-3">
+                <p class="mb-0">Your device has configured successfully, please connect the device to Wifi-Netowrk again
+                    and don't reload or leve the page</p>
+            </div>
+        </div>
         <div id="foundAlert" class="alert alert-success d-flex align-items-center" role="alert"
              style="display: none !important;">
             <div class="flex-00-auto">
@@ -46,42 +47,63 @@
                 <p class="mb-0">Found device!</p>
             </div>
         </div>
-        <!-- Your Block -->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
+    <!-- Your Block -->
         <div id="configDiv" class="block block-rounded block-bordered" style="display: none">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Configuration</h3>
             </div>
-            <div class="container">
-                <p>To add a new device, enter a friendly name, select your local wifi network, enter password and
-                    then submit.
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <form action="{{route('devices.store')}}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="example-text-input">Add a memorable name:</label>
-                        <input id="fname" name="fname" type="text" class="form-control form-control-alt"
-                               placeholder="Friendly Name">
-                    </div>
-                    <input type="hidden" id="device_id" name="device_id">
-                    <div class="form-group">
-                        <label for="example-select">Select Wifi Network:</label>
-                        <select id="ssid" name="ssid" class="form-control form-control-alt">
-                            <option disabled selected>Please select</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="example-text-input">Enter WiFi Password:</label>
-                        <input id="wifiPassword" name="wifiPassword" type="password"
-                               class="form-control form-control-alt"
-                               placeholder="">
-                    </div>
-                    <div class="form-group">
+            <div id="configData">
+                <div class="container">
+                    <p>To add a new device, enter a friendly name, select your local wifi network, enter password and
+                        then submit.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <form id="createDeviceForm" action="{{route('devices.store')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="example-text-input">Add a memorable name:</label>
+                            <input id="fname" name="fname" type="text" class="form-control form-control-alt"
+                                   placeholder="Friendly Name" required>
+                        </div>
+                        <input type="hidden" id="device_id" name="device_id">
+                        <div class="form-group">
+                            <label for="example-select">Select Wifi Network:</label>
+                            <select id="ssid" name="ssid" class="form-control form-control-alt required" required>
+                                <option disabled>Please select</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="example-text-input">Enter WiFi Password:</label>
+                            <input id="wifiPassword" name="wifiPassword" type="password"
+                                   class="form-control form-control-alt"
+                                   placeholder="" required>
+                        </div>
+                        <div class="form-group">
 
-                        <button type="submit" class="btn btn-sm btn-success" data-dismiss="modal">Submit</button>
+                            <button type="submit" class="btn btn-sm btn-success" data-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="configAdd" style="display: none !important;">
+                <div class="container">
+                    <p>No response from server,Connect to Wifi, then press "Try Again"</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <a href="#" class="btn btn-sm btn-success" data-dismiss="modal">Try Again</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <!-- END Your Block -->

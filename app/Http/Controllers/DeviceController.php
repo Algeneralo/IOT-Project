@@ -30,7 +30,8 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        return view('devices.create');
+        $mqtt = MQTT::where('user_id', Auth::id())->first();
+        return view('devices.create', compact('mqtt'));
     }
 
     /**
@@ -42,18 +43,15 @@ class DeviceController extends Controller
     public function store(StoreDeviceRequest $request)
     {
         try {
-            $response = $this->configure($request);
-            if ($response->getStatusCode() == 200) {
-                $device = Devices::create([
-                    "user_id" => Auth::id(),
-                    "name" => $request->fname,
-                    "mac_address" => $request->device_id,
-                    "type" => "ftss",
-                ]);
-            }
+            $device = Devices::create([
+                "user_id" => Auth::id(),
+                "name" => $request->fname,
+                "mac_address" => $request->device_id,
+                "type" => "ftss",
+            ]);
             if ($device)
                 return redirect('devices')->with("success", "Device Added successfully");
-            return redirect('devices')->with("failed", $response->getBody()->getContents()->error);
+            return redirect('devices')->with("failed", "something went wrong");
         } catch (\Exception $exception) {
             return abort(500);
         }
@@ -152,28 +150,16 @@ class DeviceController extends Controller
         return abort(404);
     }
 
-    /**
-     * get device-info from an external api and return it
-     *
-     * @param Client $client
-     * @return string deviceID
-     */
-    private function getDeviceID(Client $client)
-    {
-        $response = $client->get("http://192.168.123.1/device-info");
-//        $response = $client->get("http://localhost:9000/testApid");
-        if (json_decode($response->getStatusCode()) == 200) {
-            return json_decode($response->getBody()->getContents())->hardware_device_id;
-        }
-        return abort(500);
-    }
+//    private function getDeviceID(Client $client)
+//    {
+//        $response = $client->get("http://192.168.123.1/device-info");
+////        $response = $client->get("http://localhost:9000/testApid");
+//        if (json_decode($response->getStatusCode()) == 200) {
+//            return json_decode($response->getBody()->getContents())->hardware_device_id;
+//        }
+//        return abort(500);
+//    }
 
-    /**
-     * get networks ssids
-     *
-     * @param Client $client
-     * @return array networks
-     */
     private function getNetworks(Client $client)
     {
         $response = $client->get("http://192.168.123.1/networks");
@@ -184,23 +170,17 @@ class DeviceController extends Controller
         return [];
     }
 
-    /**
-     * check if device is connected
-     *
-     * @param Request $request
-     * @return status
-     */
-    public function heartDevice(Request $request)
-    {
-        if ($request->ajax()) {
-            $client = new Client(['http_errors' => false]);
-            try {
-                $response = $client->get("http://192.168.123.1/heart");
-            } catch (\Exception $exception) {
-                return response()->json(['status' => '500']);
-            }
-            return response()->json(['status' => $response->getStatusCode()]);
-        }
-        return abort(500);
-    }
+//    public function heartDevice(Request $request)
+//    {
+//        if ($request->ajax()) {
+//            $client = new Client(['http_errors' => false]);
+//            try {
+//                $response = $client->get("http://192.168.123.1/heart");
+//            } catch (\Exception $exception) {
+//                return response()->json(['status' => '500']);
+//            }
+//            return response()->json(['status' => $response->getStatusCode()]);
+//        }
+//        return abort(500);
+//    }
 }
