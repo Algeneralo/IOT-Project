@@ -29,8 +29,8 @@
     // check device status until success
     function getHeart() {
         $.ajax({
-            url: 'http://localhost:9000/testApin',
-            // url: 'http://192.168.123.1/heart',
+            // url: 'http://localhost:9000/testApin',
+            url: 'http://192.168.123.1/heart',
             type: 'GET',
             cache: true,
             data: {
@@ -60,8 +60,8 @@
     function getDeviceID() {
         deviceID = "";
         $.ajax({
-            url: 'http://localhost:9000/testApid?callback=sss',
-            // url: '"http://192.168.123.1/device-info',
+            // url: 'http://localhost:9000/testApid?callback=sss',
+            url: '"http://192.168.123.1/device-info',
             type: 'GET',
             async: false,
             data: {
@@ -81,8 +81,8 @@
     function getNetworks() {
         let networks = [];
         $.ajax({
-            url: 'http://localhost:9000/testApin',
-            // url: 'http://192.168.123.1/networks',
+            // url: 'http://localhost:9000/testApin',
+            url: 'http://192.168.123.1/networks',
             type: 'GET',
             async: false,
             data: {
@@ -122,8 +122,8 @@
         $(this).find('button').attr('disabled', 'disabled');
         // let configData = prepareData();
         $.ajax({
-            url: 'http://localhost:9000/testApic',
-            // url: 'http://192.168.123.1/networks',
+            // url: 'http://localhost:9000/testApic',
+            url: 'http://192.168.123.1/config',
             type: 'POST',
             async: false,
             data: prepareData(),
