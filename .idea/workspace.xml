@@ -28,8 +28,8 @@
       <file leaf-file-name="device-config.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="128" column="19" lean-forward="true" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+            <state relative-caret-position="387">
+              <caret line="186" column="48" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -372,7 +372,7 @@
       <workItem from="1545437463888" duration="26621000" />
       <workItem from="1545507608978" duration="9000" />
       <workItem from="1545581576404" duration="4151000" />
-      <workItem from="1545613501204" duration="99000" />
+      <workItem from="1545613501204" duration="381000" />
     </task>
     <task id="LOCAL-00001" summary="Activate home page with user devices">
       <created>1545193458095</created>
@@ -385,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53785000" />
+    <option name="totallyTimeSpent" value="54067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="128" column="19" lean-forward="true" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+        <state relative-caret-position="387">
+          <caret line="186" column="48" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
         </state>
       </provider>
     </entry>

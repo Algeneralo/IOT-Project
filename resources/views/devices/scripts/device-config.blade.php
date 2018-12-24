@@ -28,6 +28,7 @@
 
     // check device status until success
     function getHeart() {
+        console.log("Get Heart from device");
         $.ajax({
             // url: 'http://localhost:9000/testApin',
             url: 'http://192.168.123.1/heart',
@@ -38,6 +39,7 @@
             },
             dataType: 'JSON',
             success: function (data) {
+                console.log("Success to get Heart");
                 prepareFormData();
             }, error: function (data, textStatus, jqXHR) {
 
@@ -58,6 +60,7 @@
     }
 
     function getDeviceID() {
+        console.log("Get device ID");
         deviceID = "";
         $.ajax({
             // url: 'http://localhost:9000/testApid?callback=sss',
@@ -69,6 +72,8 @@
             },
             dataType: 'JSON',
             success: function (data) {
+
+                console.log("success getting device id");
                 return deviceID = data.hardware_device_id;
             }, error: function (error) {
                 console.log(error);
@@ -80,6 +85,7 @@
 
     function getNetworks() {
         let networks = [];
+        console.log("get networks");
         $.ajax({
             // url: 'http://localhost:9000/testApin',
             url: 'http://192.168.123.1/networks',
@@ -90,6 +96,7 @@
             },
             dataType: 'JSON',
             success: function (data) {
+                console.log("success getting network");
                 networks = data.networks;
             }, statusCode: {
                 503: function () {
@@ -119,6 +126,7 @@
     // config the device after precess confirm
     $("#createDeviceForm button").on("click", function (e) {
         e.preventDefault();
+        console.log("Config the device");
         $(this).find('button').attr('disabled', 'disabled');
         // let configData = prepareData();
         $.ajax({
@@ -129,6 +137,7 @@
             data: prepareData(),
             dataType: 'JSON',
             success: function (data) {
+                console.log("success device configuration");
                 saveDevice()
             }, statusCode: {
                 400: function (e) {
@@ -175,6 +184,7 @@
     }
 
     function saveDevice() {
+        console.log("trying to save device to db");
         $("#foundAlert").attr("style", "display: none !important");
         $("#searchingNetworkAlert").attr("style", "display: flex !important");
         $("#configData").attr("style", "display: none !important");
@@ -193,6 +203,7 @@
             },
             dataType: 'JSON',
             success: function (data) {
+
                 $('#createDeviceForm').submit();
             }, error: function (error) {
                 $("#configAdd").attr("style", "display: block !important");
