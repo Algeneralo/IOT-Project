@@ -23,11 +23,10 @@
         <div class="row">
             @foreach($devices as $device)
                 <div class="col-md-6 col-xl-3">
-                    <a class="block block-rounded block-link-shadow bg-success"
+                    <a id="{{$device->mac_address}}" class="block block-rounded block-link-shadow bg-success"
                        href="{{route('devices.show',$device->id)}}" data-toggle="tooltip"
-                       data-placement="top" title="Target Temp!">
-                        <div id="{{$device->mac_address}}"
-                             class="block-content block-content-full d-flex align-items-center justify-content-between">
+                       data-placement="top" data-original-title="Target Temp!">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
                             <div>
                                 <i class="fa fa-2x fa-check-circle text-white-75"></i>
                             </div>
@@ -61,15 +60,14 @@
         <!-- END Your Block -->
     </div>
     <!-- END Page Content -->
+
 @endsection
 @section("js")
     <!-- Source Paho MQTT Client-->
     <script src="{{ URL::asset('js/paho-mqtt.js') }}"></script>
     <!-- Utility Javascript -->
     <script src="{{ URL::asset('js/home_utility.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
     <script>
-        connect();
+        connect("{{$mqtt->ip}}", "{{$mqtt->port}}", "{{\Illuminate\Support\Facades\Auth::user()->iot_id}}", "{{$mqtt->user}}", "{{$mqtt->password}}");
     </script>
 @endsection

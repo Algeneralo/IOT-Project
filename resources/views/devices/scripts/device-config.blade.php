@@ -132,9 +132,9 @@
         $.ajax({
             // url: 'http://localhost:9000/testApic',
             url: 'http://192.168.123.1/config',
-            type: 'POST',
+            type: 'PUT',
             async: false,
-            data: prepareData(),
+            data: JSON.stringify(prepareData()),
             dataType: 'JSON',
             success: function (data) {
                 console.log("success device configuration");

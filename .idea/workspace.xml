@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a630deb0-e44f-423b-b03f-ba03cb8c0dd2" name="Default" comment="Activate home page with user devices">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/device_utility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/home_utility.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home_utility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
@@ -23,17 +23,8 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="99" column="85" selection-start-line="99" selection-start-column="85" selection-end-line="99" selection-end-column="85" />
+            <state relative-caret-position="401">
+              <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="148" />
             </state>
           </provider>
         </entry>
@@ -41,8 +32,20 @@
       <file leaf-file-name="device-config.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            <state relative-caret-position="224">
+              <caret line="136" column="47" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="13" />
+              <folding>
+                <element signature="e#40#56#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,9 +53,10 @@
       <file leaf-file-name="home_utility.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/home_utility.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+            <state relative-caret-position="81">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
               <folding>
+                <element signature="n#!!block;n#onMessageArrived#0" />
                 <element signature="n#!!block;n#disconnect#0" />
                 <element signature="n#!!block;n#unsubscribe#0" />
                 <element signature="n#!!block;n#unsubscribeSuccess#0" />
@@ -72,11 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>profile</find>
-      <find>MY DEVICES</find>
-      <find>Manage Devices</find>
-      <find>route('devices</find>
-      <find>Add</find>
       <find>84f3ebb495a9</find>
       <find>before</find>
       <find>fa</find>
@@ -91,17 +90,22 @@
       <find>store</find>
       <find>test</find>
       <find>testApi</find>
-      <find>.carousel-indicators li</find>
-      <find>.slide .carousel-indicators</find>
+      <find />
+      <find />
       <find>.carousel-indicators</find>
-      <find>.travel-post .title1</find>
+      <find />
       <find>owl-carousel</find>
       <find>s1</find>
       <find>config</find>
       <find>return</find>
       <find>connected</find>
-      <find>sub</find>
       <find>localhost</find>
+      <find />
+      <find>POST</find>
+      <find>simplebar-scroll-content</find>
+      <find>1234</find>
+      <find>console.log</find>
+      <find>iot_id</find>
     </findStrings>
     <replaceStrings>
       <replace>networks</replace>
@@ -127,7 +131,6 @@
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/Devices.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_18_005040_create_devices_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_19_012030_create_mqtt_table.php" />
         <option value="$PROJECT_DIR$/.env" />
@@ -149,8 +152,10 @@
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/resources/views/website/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/devices/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public/js/home_utility.js" />
+        <option value="$PROJECT_DIR$/storage/framework/views/9a174cbb6dd68a10f02e2f52da11955471f7ccc7.php" />
         <option value="$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php" />
       </list>
     </option>
@@ -255,7 +260,7 @@
       <path value="$PROJECT_DIR$/vendor/mbezhanov/faker-provider-collection" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -274,6 +279,17 @@
             <path>
               <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
@@ -368,7 +384,7 @@
       <workItem from="1545581576404" duration="4151000" />
       <workItem from="1545613501204" duration="496000" />
       <workItem from="1545697904903" duration="1927000" />
-      <workItem from="1545981542719" duration="4406000" />
+      <workItem from="1545981542719" duration="11201000" />
     </task>
     <task id="LOCAL-00001" summary="Activate home page with user devices">
       <created>1545193458095</created>
@@ -381,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60515000" />
+    <option name="totallyTimeSpent" value="67310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,34 +472,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Activate home page with user devices" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3520">
-          <caret line="176" column="32" lean-forward="true" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_18_005040_create_devices_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -571,13 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -730,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/paho-mqtt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="2320" column="33" lean-forward="true" selection-start-line="2320" selection-start-column="33" selection-end-line="2320" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -748,20 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="182" selection-start-line="182" selection-end-line="191" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="486" column="10" selection-start-line="486" selection-start-column="8" selection-end-line="486" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -779,18 +739,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="99" column="85" selection-start-line="99" selection-start-column="85" selection-end-line="99" selection-end-column="85" />
+        <state relative-caret-position="47">
+          <caret line="470" column="14" selection-start-line="470" selection-start-column="14" selection-end-line="470" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/paho-mqtt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="1760" column="44" lean-forward="true" selection-start-line="1760" selection-start-column="44" selection-end-line="1760" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/mqtt.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="182" column="90" selection-start-line="182" selection-start-column="90" selection-end-line="182" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/e0ea08c08d76539215821b3b8d7dc45d033de35a.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5680">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/57b68737faeedf24ae6ae8c2f07a9eefdf46cb55.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/9a174cbb6dd68a10f02e2f52da11955471f7ccc7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/home_utility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+        <state relative-caret-position="81">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding>
+            <element signature="n#!!block;n#onMessageArrived#0" />
             <element signature="n#!!block;n#disconnect#0" />
             <element signature="n#!!block;n#unsubscribe#0" />
             <element signature="n#!!block;n#unsubscribeSuccess#0" />
@@ -805,10 +811,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="99" column="85" selection-start-line="99" selection-start-column="85" selection-end-line="99" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/devices/scripts/device-config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+        <state relative-caret-position="224">
+          <caret line="136" column="47" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
         </state>
       </provider>
     </entry>
