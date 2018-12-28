@@ -51,13 +51,13 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   //hint! message.payloadString, destinationName, topic
-console.log(message.topic);
+console.log(message.destinationName);
 
 // junk code!!
 if(message.destinationName =='1234567890/84f3ebb495a9/ftss/s'){
   var stemp = safeTagsRegex(message.payloadString); // TODO::WORK HERE
   targetGlobalValue = stemp;
-  //console.log(stemp);
+  console.log(stemp);
   document.getElementById('s1').innerHTML = stemp;
   }
 if(message.destinationName =='1234567890/111111111111/ftss/s'){

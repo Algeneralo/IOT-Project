@@ -64,7 +64,7 @@
         deviceID = "";
         $.ajax({
             // url: 'http://localhost:9000/testApid?callback=sss',
-            url: '"http://192.168.123.1/device-info',
+            url: 'http://192.168.123.1/device-info',
             type: 'GET',
             async: false,
             data: {
@@ -145,11 +145,13 @@
                     $(this).find('button').removeAttr('disabled');
                 },
                 403: function (e) {
-                    alert(e.responseJSON.error)
+                    alert(e.responseJSON.error);
                     $(this).find('button').removeAttr('disabled');
                     // saveDevice()
                 },
             }, error: function (error) {
+                console.log("error with device config,trying again....");
+                $("#createDeviceForm button").click();
                 // $(this).find('button').removeAttr('disabled');
             }
         });
@@ -160,7 +162,6 @@
         fname = $("#fname").val();
         return {
             "name": fname,
-            "device_id": deviceID,
             "device_stats_interval": 60,
             "wifi": {
                 "ssid": $("#ssid").val(),
@@ -169,16 +170,13 @@
             "mqtt": {
                 "host": "{{$mqtt->ip}}",
                 "port": "{{$mqtt->port}}",
-                "base_topic": "devices/",
+                "base_topic": "{{\Illuminate\Support\Facades\Auth::user()->iot_id}}/",
                 "auth": true,
                 "username": "{{$mqtt->user}}",
                 "password": "{{$mqtt->password}}"
             },
             "ota": {
                 "enabled": true
-            },
-            "settings": {
-                "percentage": 55
             }
         };
     }
