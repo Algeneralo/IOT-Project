@@ -13,7 +13,7 @@ class AddUserToProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::table('profiles', function (Blueprint $table) {
+        Schema::table('fermentation_profiles', function (Blueprint $table) {
             $table->foreign("user_id")->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -25,7 +25,7 @@ class AddUserToProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::table('profiles', function (Blueprint $table) {
+        Schema::table('fermentation_profiles', function (Blueprint $table) {
             $table->dropForeign('user_id');
         });
     }

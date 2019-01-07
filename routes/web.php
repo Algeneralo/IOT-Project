@@ -41,12 +41,13 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::match(['get', 'post'], '/profile', 'UserController@profile');
     //devices Routes
     Route::resource("devices", "DeviceController");
-    Route::get("/getHeart", "DeviceController@heartDevice");
     Route::get("/deviceFormData", "DeviceController@getFormData");
     Route::get("/checkServer", function () {
         return response()->json(null, 200);
     });
-    Route::view("/test", 'test');
+
+    //Fermentation Profiles routes
+    Route::resource("ferments", "FermentationProfilesController");
 });
 
 

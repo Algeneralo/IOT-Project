@@ -20,6 +20,7 @@ class CreateStagesTable extends Migration
             $table->float("temp");
             $table->time("time");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

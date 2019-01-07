@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a630deb0-e44f-423b-b03f-ba03cb8c0dd2" name="Default" comment="Activate home page with user devices">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Profiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FermentationProfiles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Stages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,20 +24,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2019_01_07_024734_create_stages_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php">
+      <file leaf-file-name="backend.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="184">
+              <caret line="248" column="68" selection-start-line="248" selection-start-column="68" selection-end-line="248" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2019_01_07_025333_add_profile_to_stages_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php">
+      <file leaf-file-name="FermentationProfilesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
+              <folding>
+                <element signature="e#40#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_07_022027_create_fermentation_profiles_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_fermentation_profiles_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_07_024734_create_stages_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_07_022659_add_user_to_mqtt_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022659_add_user_to_mqtt_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -39,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.carousel-indicators</find>
       <find>.travel-post .title1</find>
       <find>owl-carousel</find>
       <find>s1</find>
@@ -69,6 +105,7 @@
       <find>content_</find>
       <find>console</find>
       <find>Â°</find>
+      <find>heartDevice</find>
     </findStrings>
     <replaceStrings>
       <replace>networks</replace>
@@ -80,8 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/test.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/devices/device_config.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/device.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/devices/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/devices/js/device-status.blade.php" />
@@ -89,7 +124,6 @@
         <option value="$PROJECT_DIR$/resources/views/devices/js/device-config.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/StoreDeviceRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/devices/create.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/app/Http/Controllers/Web/WebController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/9a174cbb6dd68a10f02e2f52da11955471f7ccc7.php" />
@@ -112,7 +146,6 @@
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/public_html/rawafed/assets/css/style.css" />
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/resources/views/admin/content_pages/index.blade.php" />
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/app/Http/Requests/Admin/UpdateContentPagesRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" />
         <option value="$PROJECT_DIR$/public/js/paho-mqtt.js" />
         <option value="$PROJECT_DIR$/resources/views/devices/index.blade.php" />
         <option value="$PROJECT_DIR$/public/js/home_utility.js" />
@@ -121,16 +154,20 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022411_add_user_to_devices_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022659_add_user_to_mqtt_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_19_012030_create_mqtt_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php" />
         <option value="$PROJECT_DIR$/app/Profiles.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" />
         <option value="$PROJECT_DIR$/resources/views/profiles/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/FermentationProfiles.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php" />
+        <option value="$PROJECT_DIR$/app/Stages.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" />
+        <option value="$PROJECT_DIR$/app/FermentationProfiles.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_fermentation_profiles_table.php" />
       </list>
     </option>
   </component>
@@ -261,6 +298,19 @@
             <path>
               <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -290,15 +340,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Work\Upwork\IOT\IOTProject\public" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\public\js" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\public\images" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views\devices\js" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Work\Upwork\IOT\IOTProject\database\migrations" />
+      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -349,7 +400,7 @@
       <workItem from="1546632836465" duration="1000" />
       <workItem from="1546633152584" duration="501000" />
       <workItem from="1546789404162" duration="6000" />
-      <workItem from="1546825621686" duration="4176000" />
+      <workItem from="1546825621686" duration="5393000" />
     </task>
     <task id="LOCAL-00001" summary="Activate home page with user devices">
       <created>1545193458095</created>
@@ -362,7 +413,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82484000" />
+    <option name="totallyTimeSpent" value="83701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -438,13 +489,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Activate home page with user devices" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="248" column="51" selection-start-line="248" selection-start-column="51" selection-end-line="248" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/laravel.app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -509,13 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -547,9 +584,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/MQTT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
+        <state relative-caret-position="331">
           <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
@@ -557,10 +601,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/backend.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="248" column="68" selection-start-line="248" selection-start-column="68" selection-end-line="248" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/FermentationProfiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Stages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
           <folding>
             <element signature="e#23#62#0#PHP" expanded="true" />
           </folding>
@@ -569,18 +637,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
           <folding>
             <element signature="e#40#69#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022659_add_user_to_mqtt_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="504">
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -591,24 +659,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="20">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022659_add_user_to_mqtt_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_fermentation_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>

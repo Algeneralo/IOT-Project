@@ -15,7 +15,7 @@ class FermentationProfilesController extends Controller
      */
     public function index()
     {
-        $profiles = FermentationProfiles::where('user_id', Auth::id()) - with("stages")->get();
+        $profiles = FermentationProfiles::where('user_id', Auth::id())->with("stages")->get();
         return view("FermentationProfiles.index", compact("profiles"));
     }
 
