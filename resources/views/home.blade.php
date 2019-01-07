@@ -24,7 +24,7 @@
             @foreach($devices as $device)
                 <div class="col-md-6 col-xl-3">
                     <a id="{{$device->mac_address}}" class="block block-rounded block-link-shadow bg-secondary js-tooltip-enabled"
-                       href="{{route('devices.show',$device->id)}}" data-toggle="tooltip" data-placement="top" data-original-title="Stopped!">
+                       href="{{route('devices.show',$device->id)}}"  data-toggle="tooltip" data-placement="top" data-original-title="Stopped!">
                         <div class="block-content block-content-full d-flex align-items-center justify-content-between">
                             <div>
                                 <i class="fa fa-2x fa-times-circle text-white-75 oo"></i>

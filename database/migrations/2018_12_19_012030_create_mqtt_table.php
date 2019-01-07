@@ -23,9 +23,6 @@ class CreateMqttTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        Schema::table('mqtt', function (Blueprint $table) {
-            $table->foreign("user_id")->references('id')->on('users')->onDelete('cascade');;
-        });
     }
 
     /**
