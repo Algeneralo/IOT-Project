@@ -135,6 +135,7 @@
             type: 'PUT',
             async: false,
             data: JSON.stringify(prepareData()),
+            contentType: "application/json; charset=utf-8",
             dataType: 'JSON',
             success: function (data) {
                 console.log("success device configuration");

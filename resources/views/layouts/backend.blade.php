@@ -244,6 +244,13 @@ MAIN CONTENT LAYOUT
                 {{--</li>--}}
                 {{--</ul>--}}
                 {{--</li>--}}
+                <li class="nav-main-heading">Profiles</li>
+                <li class="nav-main-item open">
+                    <a class="nav-main-link" href="">
+                        <i class="nav-main-link-icon fa fa-beer"></i>
+                        <span class="nav-main-link-name">Ferment</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- END Side Navigation -->

@@ -5,7 +5,6 @@
 
 <!-- Utility Javascript -->
 <script src="{{ URL::asset('js/device_utility.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
     $(function () {
         $('#target').on('click', function () {

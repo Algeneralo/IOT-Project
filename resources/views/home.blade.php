@@ -23,17 +23,15 @@
         <div class="row">
             @foreach($devices as $device)
                 <div class="col-md-6 col-xl-3">
-                    <a id="{{$device->mac_address}}" class="block block-rounded block-link-shadow bg-success"
-                       href="{{route('devices.show',$device->id)}}" data-toggle="tooltip"
-                       data-placement="top" data-original-title="Target Temp!">
+                    <a id="{{$device->mac_address}}" class="block block-rounded block-link-shadow bg-secondary js-tooltip-enabled"
+                       href="{{route('devices.show',$device->id)}}" data-toggle="tooltip" data-placement="top" data-original-title="Stopped!">
                         <div class="block-content block-content-full d-flex align-items-center justify-content-between">
                             <div>
-                                <i class="fa fa-2x fa-check-circle text-white-75"></i>
+                                <i class="fa fa-2x fa-times-circle text-white-75 oo"></i>
                             </div>
                             <div class="ml-3 text-right">
-                                <p class="text-white font-size-h3 font-w300 mb-0">{{$device->name}}</p>
-                                <p class="text-white font-size-h3 font-w300 mb-0 t">1</p>
-                                <p class="text-white-75 mb-0 s">default 6 / --°</p>
+                                <p class="text-white font-size-h3 font-w300 mb-0 t">--</p>
+                                <p class="text-white-75 mb-0 s">{{$device->name}} / <span> --°</span></p>
                             </div>
                         </div>
                     </a>

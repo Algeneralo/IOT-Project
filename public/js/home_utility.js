@@ -25,6 +25,8 @@ var connected = false;
 var currentUnit = true;
 var temporaryUnit = true;
 var targetGlobalValue = null;
+// kevin
+var iot_id = "1234567890";
 
 // called when the client connects
 function onConnect(context) {
@@ -34,17 +36,20 @@ function onConnect(context) {
 
 
 function onConnected(reconnect, uri) {
-    console.log('connected');
+    console.log('onConnected');
     connected = true;
 //  publish(1)
 }
 
 function onFail(context) {
+    console.log('onFail');
     connected = false;
 }
 
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
+    console.log('lost connection');
+    console.log(responseObject);
     connected = false;
 }
 
@@ -56,22 +61,44 @@ function onMessageArrived(message) {
     let stemp = safeTagsRegex(message.payloadString);
     if (topic === "t" || topic === "s") {
         let device_class = "." + topic;
-        $(device_div).find(device_class).html(stemp);
+        // me add to try
+        //        let sblob = message.destinationName.split('/')[0];
+        //let sblob = document.getElementsByClassName('s');
+        //let sblob = document.querySelectorAll($(device_div).find('.s'));
+        //console.log(sblob);
+        console.log(topic +" temp"+stemp);
+        if(topic==="t")
+            $(device_div).find(device_class).html(stemp);
+        else
+            $(device_div).find(device_class).find("span").html(stemp);
     }
-    if (topic === "h" && stemp === "true") {
+    if (topic === "o" && stemp === "0") {
+        $(device_div).attr('data-original-title', 'Stopped!');
+        $(device_div).removeClass("bg-primary").removeClass('bg-danger').removeClass('bg-success').addClass("bg-secondary");
+        $(device_div).find('.oo').attr('class','fa fa-2x fa-times-circle text-white-75 oo');
+    }
+    if (topic === "o" && stemp === "1") {
+        $(device_div).attr('data-original-title', 'Target Temp!');
+        $(device_div).removeClass("bg-danger").removeClass('bg-primary').removeClass('bg-secondary').addClass("bg-success");
+        $(device_div).find('.oo').attr('class','fa fa-2x fa-check-circle text-white-75 oo');
+    }
+    if (topic === "o" && stemp === "2") {
         $(device_div).attr('data-original-title', 'Heating!');
-        $(device_div).removeClass("bg-primary").removeClass('bg-success').addClass("bg-heating");
+        $(device_div).removeClass("bg-primary").removeClass('bg-success').removeClass('bg-secondary').addClass("bg-danger");
+        $(device_div).find('.oo').attr('class','fa fa-2x fa-arrow-alt-circle-up text-white-75 oo');
     }
-    if (topic === "c" && stemp === "true") {
+    if (topic === "o" && stemp === "3") {
         $(device_div).attr('data-original-title', 'Cooling!');
-        $(device_div).removeClass("bg-heating").removeClass('bg-success').addClass("bg-primary");
+        $(device_div).removeClass("bg-danger").removeClass('bg-success').removeClass('bg-secondary').addClass("bg-primary");
+        $(device_div).find('.oo').attr('class','fa fa-2x fa-arrow-alt-circle-down text-white-75 oo');
     }
 
 
 }
 
 // hostname, port, iot_id, user, pass
-function connect(hostname, port, iot_id, user, pass) {
+// function connect(hostname, port, iot_id, user, pass) {
+function connect() {
     var hostname = 'm15.cloudmqtt.com';
     var port = 32060;   // webSocketPort
     var clientId = 'brew-web-' + makeid();
@@ -80,7 +107,7 @@ function connect(hostname, port, iot_id, user, pass) {
     var user = 'fsoyuhgt';
     var pass = '4RGUx0JxSbDn';
 
-    iot_id = "1234567890";
+//    var iot_id = "1234567890";
     var keepAlive = 60;
     var timeout = 3;
     var tls = true;
@@ -93,7 +120,6 @@ function connect(hostname, port, iot_id, user, pass) {
     var lastWillMessageVal = '';
     // var port = 12060;
     // var sslPort = 22060;
-
 
     if (path.length > 0) {
         client = new Paho.Client(hostname, Number(port), path, clientId);
@@ -156,15 +182,10 @@ function subscribe() {
     client.subscribe(topic, {qos: Number(qos)});
     console.log('sub +s');
 
-    var topic = iot_id + '/+/ftss/h';
+    var topic = iot_id + '/+/ftss/o';
     var qos = 0;
     client.subscribe(topic, {qos: Number(qos)});
-    console.log('sub +h');
-
-    var topic = iot_id + '/+/ftss/c';
-    var qos = 0;
-    client.subscribe(topic, {qos: Number(qos)});
-    console.log('sub +c');
+    console.log('sub +o');
 }
 
 function unsubscribe() {
@@ -181,13 +202,7 @@ function unsubscribe() {
         onFailure: unsubscribeFailure,
         invocationContext: {topic: topic}
     });
-    var topic = '1234567890/+/ftss/h';
-    client.unsubscribe(topic, {
-        onSuccess: unsubscribeSuccess,
-        onFailure: unsubscribeFailure,
-        invocationContext: {topic: topic}
-    });
-    var topic = '1234567890/+/ftss/c';
+    var topic = '1234567890/+/ftss/o';
     client.unsubscribe(topic, {
         onSuccess: unsubscribeSuccess,
         onFailure: unsubscribeFailure,
@@ -223,16 +238,16 @@ function makeid() {
 function logMessage(type, ...content) {
 }
 
-function removeClass(myClass) {
-    var element = document.getElementById("b1");
-    element.className = element.className.replace('/\b' + myClass + '\b/g', "");
-}
+//function removeClass(myClass) {
+//    var element = document.getElementById("b1");
+//    element.className = element.className.replace('/\b' + myClass + '\b/g', "");
+//}
 
-function addClass(myClass) {
-    var element, arr;
-    element = document.getElementById("b1");
-    arr = element.className.split(" ");
-    if (arr.indexOf(myClass) == -1) {
-        element.className += " " + myClass;
-    }
-}
+//function addClass(myClass) {
+//    var element, arr;
+//    element = document.getElementById("b1");
+//    arr = element.className.split(" ");
+//    if (arr.indexOf(myClass) == -1) {
+//        element.className += " " + myClass;
+//    }
+//}
