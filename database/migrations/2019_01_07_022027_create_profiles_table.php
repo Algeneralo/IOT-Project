@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration
             $table->string("name");
             $table->string("duration");
             $table->boolean("f")->comment("units setting, fahrenheit = true 1/false 0");
-            $table->longText("notes");
+            $table->longText("notes")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
