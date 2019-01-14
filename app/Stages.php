@@ -10,9 +10,4 @@ class Stages extends Model
     use SoftDeletes;
 
     protected $fillable = ["profile_id", "name", "temp", "time"];
-
-    public function profiles()
-    {
-        $this->belongsTo("profiles");
-    }
 }

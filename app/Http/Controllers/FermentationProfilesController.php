@@ -48,7 +48,9 @@ class FermentationProfilesController extends Controller
      */
     public function show($id)
     {
-        //
+        $profile = FermentationProfiles::where('user_id', Auth::id())->with('stages')->findOrfail($id);
+        $view = view("FermentationProfiles.modal.ShowSubView", compact("profile"))->render();
+        return response()->json($view);
     }
 
     /**

@@ -19,7 +19,7 @@ class CreateFermentationProfilesTable extends Migration
             $table->string("type");
             $table->string("name");
             $table->string("duration");
-            $table->boolean("f")->comment("units setting, fahrenheit = true 1/false 0");
+            $table->boolean("fahrenheit")->comment("units setting, fahrenheit = true 1/false 0");
             $table->longText("notes")->nullable();
             $table->timestamps();
             $table->softDeletes();

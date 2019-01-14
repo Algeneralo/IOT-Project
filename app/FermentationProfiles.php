@@ -12,6 +12,6 @@ class FermentationProfiles extends Model
 
     public function stages()
     {
-        $this->hasMany("stages");
+       return $this->hasMany(Stages::class,'profile_id');
     }
 }
