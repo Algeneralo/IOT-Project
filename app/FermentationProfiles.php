@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class FermentationProfiles extends Model
 {
     use SoftDeletes;
-    protected $fillable = ['user_id', 'type', 'name', 'duration', 'f', 'notes'];
+    protected $fillable = ['user_id', 'type', 'name', 'duration', 'fahrenheit', 'notes'];
 
     public function stages()
     {
-       return $this->hasMany(Stages::class,'profile_id');
+        return $this->hasMany(Stages::class, 'profile_id');
     }
 }

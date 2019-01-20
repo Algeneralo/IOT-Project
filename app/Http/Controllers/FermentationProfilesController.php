@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\FermentationProfiles;
+use App\Http\Requests\StoreFremantionProfileRequest;
+use App\Stages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,9 +37,38 @@ class FermentationProfilesController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFremantionProfileRequest $request)
     {
-        //
+        try {
+            $profile = FermentationProfiles::create([
+                "user_id" => Auth::id(),
+                "type" => $request->type,
+                "mac_address" => $request->device_id,
+                "name" => $request->name,
+                "duration" => $request->duration,
+                "fahrenheit" => $request->fahrenheit,
+                "notes" => $request->notes,
+            ]);
+            if ($profile) {
+                $this->storeStages($request, $profile->id);
+                return redirect('ferments')->with("success", "Profile Added successfully");
+            }
+            return redirect('ferments')->with("failed", "something went wrong");
+        } catch (\Exception $exception) {
+            return abort(500);
+        }
+    }
+
+    private function storeStages(Request $request, $profileID)
+    {
+        for ($counter = 0; $counter < count($request->sname); $counter++) {
+            Stages::create([
+                "profile_id" => $profileID,
+                "name" => $request->sname[$counter],
+                "temp" => $request->stemp[$counter],
+                "time" => $request->stime[$counter],
+            ]);
+        }
     }
 
     /**
@@ -45,8 +76,10 @@ class FermentationProfilesController extends Controller
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
+     * @throws \Throwable
      */
-    public function show($id)
+    public
+    function show($id)
     {
         $profile = FermentationProfiles::where('user_id', Auth::id())->with('stages')->findOrfail($id);
         $view = view("FermentationProfiles.modal.ShowSubView", compact("profile"))->render();
@@ -59,7 +92,8 @@ class FermentationProfilesController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public
+    function edit($id)
     {
         //
     }
@@ -84,6 +118,14 @@ class FermentationProfilesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            $profile = FermentationProfiles::findOrFail($id);
+            $status = $profile->delete();
+            if ($status)
+                return redirect('ferments')->with("success", "Profile Deleted successfully");
+            return redirect('ferments')->with("failed", "Something went wrong");
+        } catch (\Exception $exception) {
+            return abort(500);
+        }
     }
 }

@@ -1,4 +1,13 @@
 @extends('layouts.backend')
+@section("css")
+    <style>
+        a:not([href]):not([tabindex]) {
+            cursor: pointer;
+            color: #0665d0 !important;
+            text-decoration: none;
+        }
+    </style>
+@endsection
 @section('content')
     <!-- Hero -->
     <div class="bg-body-light">
@@ -23,7 +32,7 @@
             <div class="block-header block-header-default">
                 <h3 class="block-title">My Fermentation Profiles</h3>
                 <div class="block-options">
-                    <button type="button" data-toggle="modal" data-target="#modal-block-large" class="btn btn-success">
+                    <button type="button" data-toggle="modal" data-target="#createModal" class="btn btn-success">
                         <i class="fa fa-plus"></i> Add Profile
                     </button>
                 </div>
@@ -31,6 +40,15 @@
             <div class="col-sm-6 col-xl-4">
             </div>
             <div class="block-content">
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        <p>{{session('success')}}</p>
+                    </div>
+                @elseif(session('failed'))
+                    <div class="alert alert-danger">
+                        <p>{{session('failed')}}</p>
+                    </div>
+                @endif
                 <table class="table table-hover table-vcenter">
                     <thead>
                     <tr>
@@ -51,13 +69,13 @@
                                 <input class="id" name="id" value="{{$profile->id}}" type="hidden">
                             </td>
                             <td class="font-w600 text-center d-none d-sm-table-cell">
-                                <span class="badge badge-secondary">{{$profile->type}}</span>
+                                <span class="badge badge-secondary">{{$profile->type ." Stages"}}</span>
                             </td>
                             <td class="font-w600 text-center d-none d-md-table-cell">
                                 <a href="">{{$profile->duration}}</a>
                             </td>
                             <td class="font-w600 text-center">
-                                <a class="more" href="#">More...</a>
+                                <a class="more">More...</a>
                             </td>
                             <td class="text-center">
                                 <div class="btn-group">
@@ -65,10 +83,15 @@
                                             data-target="#modal-block-large" title="Edit">
                                         <i class="fa fa-pencil-alt"></i>
                                     </button>
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip"
-                                            title="Delete">
-                                        <i class="fa fa-times"></i>
-                                    </button>
+                                    <form method="post" class="deleteForm"
+                                          action="{{route("ferments.destroy",$profile->id)}}">
+                                        @method("DELETE")
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-primary" data-toggle="tooltip"
+                                                title="Delete">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
@@ -79,9 +102,20 @@
         </div>
     </div>
     <!-- END Page Content -->
-    @include('FermentationProfiles.modal.edit')
     @include('FermentationProfiles.modal.show')
+    @include('FermentationProfiles.modal.create')
+    @include('FermentationProfiles.modal.edit')
 @endsection
 @section('js')
     @include('FermentationProfiles.scripts.show')
+    @include('FermentationProfiles.scripts.create')
+    <script>
+        $(".deleteForm button").on("click", function (e) {
+            e.preventDefault();
+            if (confirm('Do you want to Delete?')) {
+                console.log("true");
+                $(this).parent().submit();
+            }
+        });
+    </script>
 @endsection
