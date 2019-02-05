@@ -49,5 +49,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     //Fermentation Profiles routes
     Route::resource("ferments", "FermentationProfilesController");
 });
-
+Route::get("test",function (){
+    $value = '500060';
+    ;
+});
 

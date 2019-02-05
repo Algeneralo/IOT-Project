@@ -7,6 +7,7 @@
             text-decoration: none;
         }
     </style>
+    <link href="{{ url('css/bootstrap-duration-picker.css') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
     <!-- Hero -->
@@ -27,7 +28,16 @@
 
     <!-- Page Content -->
     <div class="content">
-        <!-- Your Block -->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
+    <!-- Your Block -->
         <div class="block block-rounded block-bordered">
             <div class="block-header block-header-default">
                 <h3 class="block-title">My Fermentation Profiles</h3>
@@ -109,7 +119,27 @@
 @section('js')
     @include('FermentationProfiles.scripts.show')
     @include('FermentationProfiles.scripts.create')
+    <script src="{{url("js/bootstrap-duration-picker.js")}}"></script>
     <script>
+
+        $('.duration-picker').durationPicker({
+            // defines whether to show seconds or not
+            showSeconds: false,
+
+            // defines whether to show days or not
+            showDays: true,
+
+            // callback function that triggers every time duration is changed
+            //   value - duration in seconds
+            //   isInitializing - bool value
+            onChanged: function (value, isInitializing) {
+
+                // isInitializing will be `true` when the plugin is initialized for the
+                // first time or when it's re-initialized by calling `setValue` method
+                console.log(value, isInitializing);
+            }
+        });
+
         $(".deleteForm button").on("click", function (e) {
             e.preventDefault();
             if (confirm('Do you want to Delete?')) {

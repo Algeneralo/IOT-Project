@@ -41,7 +41,7 @@
                                            class="form-control form-control-alt form-inline"
                                            type="text">
                                     <input placeholder="time" name="stime[]"
-                                           class="form-control form-control-alt  form-inline"
+                                           class="form-control form-control-alt  form-inline duration-picker"
                                            type="text">
                                     <input placeholder="temp" name="stemp[]"
                                            class="form-control form-control-alt form-inline"
@@ -52,14 +52,6 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Type (1 stage..)</label>
-                            <input name="type" type="number" min="1" class="form-control form-control-alt">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Duration</label>
-                            <input name="duration" type="text" class="form-control form-control-alt">
                         </div>
                         <div class="form-group">
                             <label for="name">Notes</label>

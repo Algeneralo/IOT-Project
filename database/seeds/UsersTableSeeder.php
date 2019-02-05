@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
                 'iot_id' => $faker->unique()->numberBetween(1000000000, 9999999999),
                 'email' => $faker->email,
                 'email_verified_at' => $counter % 2 == 1 ? null : Carbon::now(),
-                'isPremium' => $faker->numberBetween(0, 1),
+                'isPremium' => ''.$faker->numberBetween(0, 1),
                 'p_date' => null,
                 'created_at'=>Carbon::now(),
                 'updated_at'=>Carbon::now(),

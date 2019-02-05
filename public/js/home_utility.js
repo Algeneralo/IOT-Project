@@ -26,7 +26,8 @@ var currentUnit = true;
 var temporaryUnit = true;
 var targetGlobalValue = null;
 // kevin
-var iot_id = "1234567890";
+//var iot_id = "8285131503";
+//var iot_id = null;
 
 // called when the client connects
 function onConnect(context) {
@@ -42,14 +43,14 @@ function onConnected(reconnect, uri) {
 }
 
 function onFail(context) {
-    console.log('onFail');
+  console.log('onFail');
     connected = false;
 }
 
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
-    console.log('lost connection');
-    console.log(responseObject);
+  console.log('lost connection');
+  console.log(responseObject);
     connected = false;
 }
 
@@ -59,18 +60,21 @@ function onMessageArrived(message) {
     let topic = message.destinationName.split('/')[3];
     let device_div = "#" + message.destinationName.split('/')[1];
     let stemp = safeTagsRegex(message.payloadString);
-    if (topic === "t" || topic === "s") {
+    if (topic === "s") {
         let device_class = "." + topic;
         // me add to try
         //        let sblob = message.destinationName.split('/')[0];
-        //let sblob = document.getElementsByClassName('s');
+        //  let sblob = document.getElementsByClassName('s').innerText;
+        let blob = $(device_div).find(device_class).text();
+        let sblob = blob.split('/', 1)[0];
         //let sblob = document.querySelectorAll($(device_div).find('.s'));
-        //console.log(sblob);
-        console.log(topic +" temp"+stemp);
-        if(topic==="t")
-            $(device_div).find(device_class).html(stemp);
-        else
-            $(device_div).find(device_class).find("span").html(stemp);
+//        console.log(blob);
+//        console.log(sblob);
+        $(device_div).find(device_class).html(sblob + "/ " + stemp + "°");
+    }
+    if (topic === "t") {
+        let device_class = "." + topic;
+        $(device_div).find(device_class).html(stemp + "°");
     }
     if (topic === "o" && stemp === "0") {
         $(device_div).attr('data-original-title', 'Stopped!');
@@ -98,14 +102,19 @@ function onMessageArrived(message) {
 
 // hostname, port, iot_id, user, pass
 // function connect(hostname, port, iot_id, user, pass) {
-function connect() {
-    var hostname = 'm15.cloudmqtt.com';
-    var port = 32060;   // webSocketPort
-    var clientId = 'brew-web-' + makeid();
+function connect(hostname, port, user, pass, iot_id) {
+//  console.log(iot_id);
+//  console.log(port);
+//    var hostname = 'm15.cloudmqtt.com';
+//    var port = 32060;   // webSocketPort
+//    var port = 20000 + prt;   // webSocketPort
+//    var clientId = 'brew-web-' + makeid();
+    var clientId = iot_id;
 
     var path = '/';
-    var user = 'fsoyuhgt';
-    var pass = '4RGUx0JxSbDn';
+//    var user = 'fsoyuhgt';
+//    var user = iot_id;
+//    var pass = '4RGUx0JxSbDn';
 
 //    var iot_id = "1234567890";
     var keepAlive = 60;
@@ -175,7 +184,7 @@ function subscribe() {
     var topic = iot_id + '/+/ftss/t';
     var qos = 0;
     client.subscribe(topic, {qos: Number(qos)});
-    console.log('sub +t');
+    console.log('sub +t ' + topic);
 
     var topic = iot_id + '/+/ftss/s';
     var qos = 0;
@@ -189,20 +198,20 @@ function subscribe() {
 }
 
 function unsubscribe() {
-    var topic = '1234567890/+/ftss/t';
+    var topic = iot_id + '/+/ftss/t';
     client.unsubscribe(topic, {
         onSuccess: unsubscribeSuccess,
         onFailure: unsubscribeFailure,
         invocationContext: {topic: topic}
     });
 
-    var topic = '1234567890/+/ftss/s';
+    var topic = iot_id + '/+/ftss/s';
     client.unsubscribe(topic, {
         onSuccess: unsubscribeSuccess,
         onFailure: unsubscribeFailure,
         invocationContext: {topic: topic}
     });
-    var topic = '1234567890/+/ftss/o';
+    var topic = iot_id + '/+/ftss/o';
     client.unsubscribe(topic, {
         onSuccess: unsubscribeSuccess,
         onFailure: unsubscribeFailure,

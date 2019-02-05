@@ -24,9 +24,7 @@ class StoreFremantionProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            "type" => "required",
             "name" => "required",
-            "duration" => "required",
             "fahrenheit" => "required",
         ];
     }

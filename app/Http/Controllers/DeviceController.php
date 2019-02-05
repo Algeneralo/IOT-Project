@@ -63,7 +63,8 @@ class DeviceController extends Controller
     public function show($id)
     {
         $device = Devices::findOrfail($id);
-        return view('devices.show', compact('device'));
+        $mqtt = MQTT::where("user_id", Auth::id())->first();
+        return view('devices.show', compact('device', 'mqtt'));
     }
 
 }

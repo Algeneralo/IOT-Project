@@ -17,7 +17,7 @@ class FermentationProfilesSeeder extends Seeder
                 "user_id" => "1",
                 "name" => $faker->firstName,
                 "type" => $faker->numberBetween(1, 5),
-                "duration" => $faker->numberBetween(1, 20) . " days",
+                "duration" => $faker->numberBetween(1, 20333),
                 "fahrenheit" => $faker->numberBetween(0, 1),
                 "notes" => $faker->text,
                 'created_at' => \Carbon\Carbon::now(),

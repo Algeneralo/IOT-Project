@@ -16,10 +16,10 @@ class MtqqTableSeeder extends Seeder
         for ($counter = 0; $counter < 10; $counter++) {
             DB::table('mqtt')->insert([
                 'user_id' => $faker->unique()->numberBetween(1, 10),
-                'user' => $faker->userName,
-                'password' => $faker->password,
-                'ip' => $faker->ipv4,
-                'port' => mt_rand(10, 100),
+                'user' => "fsoyuhgt",
+                'password' => "4RGUx0JxSbDn",
+                'ip' => "m15.cloudmqtt.com",
+                'port' => 32060,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);

@@ -14,4 +14,13 @@ class FermentationProfiles extends Model
     {
         return $this->hasMany(Stages::class, 'profile_id');
     }
+
+    public function getDurationAttribute()
+    {
+        $dt = \Carbon\Carbon::now();
+        $days = $dt->diffInDays($dt->copy()->addSeconds($this->attributes["duration"]));
+        $hours = $dt->diffInHours($dt->copy()->addSeconds($this->attributes["duration"])->subDays($days));
+        $minutes = $dt->diffInMinutes($dt->copy()->addSeconds($this->attributes["duration"])->subDays($days)->subHours($hours));
+        return \Carbon\CarbonInterval::days($days)->hours($hours)->minutes($minutes)->forHumans();
+    }
 }

@@ -39,13 +39,14 @@ class FermentationProfilesController extends Controller
      */
     public function store(StoreFremantionProfileRequest $request)
     {
+        //dd($request->all());
         try {
             $profile = FermentationProfiles::create([
                 "user_id" => Auth::id(),
-                "type" => $request->type,
+                "type" => count($request->sname),
                 "mac_address" => $request->device_id,
                 "name" => $request->name,
-                "duration" => $request->duration,
+                "duration" => array_sum($request->input("stime")),
                 "fahrenheit" => $request->fahrenheit,
                 "notes" => $request->notes,
             ]);
@@ -55,6 +56,7 @@ class FermentationProfilesController extends Controller
             }
             return redirect('ferments')->with("failed", "something went wrong");
         } catch (\Exception $exception) {
+            dd($exception);
             return abort(500);
         }
     }
