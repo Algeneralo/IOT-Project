@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -13,6 +13,9 @@ class Stages extends Model
 
     public function getTimeAttribute()
     {
+        if (Request::is("ferments/*/edit")) {
+            return $this->attributes["time"];
+        }
         $dt = \Carbon\Carbon::now();
         $days = $dt->diffInDays($dt->copy()->addSeconds("{$this->attributes["time"]}"));
         $hours = $dt->diffInHours($dt->copy()->addSeconds($this->attributes["time"])->subDays($days));

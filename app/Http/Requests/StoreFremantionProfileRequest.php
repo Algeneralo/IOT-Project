@@ -26,6 +26,19 @@ class StoreFremantionProfileRequest extends FormRequest
         return [
             "name" => "required",
             "fahrenheit" => "required",
+            "sname.*" => "required",
+            "stemp.*" => "required",
+            "stime.*" => "required|gt:0",
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            "sname.*.required" => "The stage name is required",
+            "stime.*.required" => "The stage time is required",
+            "stime.*.gt" => "The stage time must be greater than :value",
+            "stemp.*.required" => "The stage temp is required",
         ];
     }
 }

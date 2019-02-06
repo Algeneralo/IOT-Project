@@ -1,11 +1,10 @@
 <script>
     $(".more").on('click', function (e) {
-        console.log("222");
         let profileId = $(this).closest('tr').find(".id").val();
-        getProfileData(profileId);
+        showProfileData(profileId);
     });
 
-    function getProfileData(id) {
+    function showProfileData(id) {
         $.ajax({
             url: '/ferments/' + id,
             type: 'GET',

@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a630deb0-e44f-423b-b03f-ba03cb8c0dd2" name="Default" comment="Activate home page with user devices">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_02_05_012013_update_stages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-duration-picker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap-duration-picker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IOTProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IOTProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="a630deb0-e44f-423b-b03f-ba03cb8c0dd2" name="Default" comment="update stages table and add durationPicker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/FermentationProfiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FermentationProfiles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateFremantionProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateFremantionProfileRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Stages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/FermentationProfilesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/FermentationProfilesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MtqqTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/MtqqTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StagesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StagesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/home_utility.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home_utility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/paho-mqtt.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/paho-mqtt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap-duration-picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap-duration-picker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,19 +41,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/home_utility.js">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="107" column="39" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="39" />
+            <state relative-caret-position="455">
+              <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/MtqqTableSeeder.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="475">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#69#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,9 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.carousel-inner&gt;.item</find>
-      <find>emulateTransitionEnd</find>
-      <find>c.TRANSITION_DURATION</find>
       <find>'strict' =</find>
       <find>offers</find>
       <find>mass_destroy</find>
@@ -107,6 +92,9 @@
       <find>console</find>
       <find>$this-&gt;time</find>
       <find>&quot;{$this-&gt;time}&quot;</find>
+      <find>edit</find>
+      <find>conso</find>
+      <find>true</find>
     </findStrings>
     <replaceStrings>
       <replace>networks</replace>
@@ -121,20 +109,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_19_012030_create_mqtt_table.php" />
-        <option value="$PROJECT_DIR$/app/Profiles.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/profiles/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_024734_create_stages_table.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/backend.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_025333_add_profile_to_stages_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_profiles_table.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_07_022027_create_fermentation_profiles_table.php" />
         <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/showSubView.blade.php" />
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/resources/views/admin/sub_services/edit.blade.php" />
         <option value="&lt;848267af-6d75-493c-9b1e-c7bdc35dcb44&gt;/rawafed/resources/views/admin/sub_services/create.blade.php" />
@@ -159,19 +141,25 @@
         <option value="$PROJECT_DIR$/public/js/home_utility.js" />
         <option value="$PROJECT_DIR$/public/css/bootstrap-duration-picker.css" />
         <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/create.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/bootstrap-duration-picker.js" />
         <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/create.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_05_012013_update_stages_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/StagesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Stages.php" />
-        <option value="$PROJECT_DIR$/app/FermentationProfiles.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/FermentationProfilesSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" />
         <option value="$PROJECT_DIR$/database/seeds/MtqqTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/FermentationProfiles.php" />
+        <option value="$PROJECT_DIR$/app/Stages.php" />
+        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/bootstrap-duration-picker.js" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/UpdateFremantionProfileRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/FermentationProfiles/modal/editSubView.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StagesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php" />
       </list>
     </option>
   </component>
@@ -284,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,10 +319,45 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="FermentationProfiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="FermentationProfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IOTProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IOTProject" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="FermentationProfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,17 +375,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views\FermentationProfiles\modal" />
-      <recent name="F:\Work\Upwork\IOT\IOTProject\database\migrations" />
-      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Work\Upwork\IOT\IOTProject\public\js" />
       <recent name="H:\Work\Upwork\IOT\IOTProject\public\css" />
       <recent name="H:\Work\Upwork\IOT\IOTProject\public" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\public" />
       <recent name="F:\Work\Upwork\IOT\IOTProject\public\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Work\Upwork\IOT\IOTProject\resources\views\FermentationProfiles\modal" />
+      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views\FermentationProfiles\modal" />
+      <recent name="F:\Work\Upwork\IOT\IOTProject\database\migrations" />
+      <recent name="F:\Work\Upwork\IOT\IOTProject\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -425,7 +448,9 @@
       <workItem from="1548428972290" duration="8000" />
       <workItem from="1549192832998" duration="1248000" />
       <workItem from="1549271063305" duration="22000" />
-      <workItem from="1549318085269" duration="11350000" />
+      <workItem from="1549318085269" duration="11544000" />
+      <workItem from="1549400369737" duration="4615000" />
+      <workItem from="1549468686251" duration="8995000" />
     </task>
     <task id="LOCAL-00001" summary="Activate home page with user devices">
       <created>1545193458095</created>
@@ -434,11 +459,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545193458095</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update stages table and add durationPicker">
+      <created>1549333848915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549333848915</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127565000" />
+    <option name="totallyTimeSpent" value="141369000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,8 +483,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49668875" visible="true" weight="0.18791947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49668875" visible="true" weight="0.1932886" />
       <window_info id="Structure" order="1" sideWeight="0.50155765" side_tool="true" weight="0.18305598" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5033113" side_tool="true" weight="0.1785174" />
@@ -465,9 +498,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32719547" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.27903682" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32719547" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49932885" weight="0.27903682" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49731544" weight="0.32719547" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.27903682" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.32843137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -478,6 +511,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -521,7 +557,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Activate home page with user devices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Activate home page with user devices" />
+    <MESSAGE value="update stages table and add durationPicker" />
+    <option name="LAST_COMMIT_MESSAGE" value="update stages table and add durationPicker" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_023117_add_user_to_profiles_table.php">
@@ -547,20 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="230" column="24" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/showSubView.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -619,24 +642,10 @@
         <state relative-caret-position="-1920" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="32" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -682,23 +691,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap-duration-picker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1355">
-          <caret line="161" column="60" selection-start-line="161" selection-start-column="60" selection-end-line="161" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_011914_change_time_in_stages_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_011914_change_time_in_stages_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_012013_update_stages_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -727,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="57" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -748,30 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Stages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/FermentationProfiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="85" selection-start-line="20" selection-start-column="85" selection-end-line="20" selection-end-column="85" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DevicesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -779,13 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -801,34 +756,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" column="73" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/home_utility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="107" column="39" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="39" />
+        <state relative-caret-position="1480">
+          <caret line="107" column="39" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/devices/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="107" column="14" lean-forward="true" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="14" lean-forward="true" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -836,6 +781,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="21" column="31" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/FermentationProfiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Stages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#22#34#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/showSubView.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-590">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap-duration-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StoreFremantionProfileRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/UpdateFremantionProfileRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/scripts/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="33" column="68" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/FermentationProfiles/modal/editSubView.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DeviceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FermentationProfilesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

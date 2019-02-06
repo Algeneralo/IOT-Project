@@ -65,7 +65,6 @@
         }
 
         function updateUI(isInitializing = false) {
-            console.log("true");
             const total = seconds +
                 minutes * 60 +
                 hours * 60 * 60 +

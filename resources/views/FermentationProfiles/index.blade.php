@@ -89,8 +89,7 @@
                             </td>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                                            data-target="#modal-block-large" title="Edit">
+                                    <button type="button" class="btn btn-sm btn-primary edit" title="Edit">
                                         <i class="fa fa-pencil-alt"></i>
                                     </button>
                                     <form method="post" class="deleteForm"
@@ -119,31 +118,15 @@
 @section('js')
     @include('FermentationProfiles.scripts.show')
     @include('FermentationProfiles.scripts.create')
+    @include('FermentationProfiles.scripts.edit')
     <script src="{{url("js/bootstrap-duration-picker.js")}}"></script>
     <script>
 
-        $('.duration-picker').durationPicker({
-            // defines whether to show seconds or not
-            showSeconds: false,
-
-            // defines whether to show days or not
-            showDays: true,
-
-            // callback function that triggers every time duration is changed
-            //   value - duration in seconds
-            //   isInitializing - bool value
-            onChanged: function (value, isInitializing) {
-
-                // isInitializing will be `true` when the plugin is initialized for the
-                // first time or when it's re-initialized by calling `setValue` method
-                console.log(value, isInitializing);
-            }
-        });
+        $('.duration-picker').durationPicker();
 
         $(".deleteForm button").on("click", function (e) {
             e.preventDefault();
             if (confirm('Do you want to Delete?')) {
-                console.log("true");
                 $(this).parent().submit();
             }
         });
