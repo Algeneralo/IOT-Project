@@ -34,7 +34,7 @@ class DeviceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param StoreDeviceRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreDeviceRequest $request)

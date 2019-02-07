@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FermentationProfiles;
 use App\Http\Requests\StoreFremantionProfileRequest;
+use App\Http\Requests\UpdateFremantionProfileRequest;
 use App\Stages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,19 +23,9 @@ class FermentationProfilesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return void
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param StoreFremantionProfileRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreFremantionProfileRequest $request)
@@ -51,14 +42,12 @@ class FermentationProfilesController extends Controller
             ]);
             if ($profile) {
                 // get the profile id and store all stages
-                for ($counter = 0; $counter < count($request->sname); $counter++) {
-                    app('App\Http\Controllers\StagesController')->store($request, $profile->id, $counter);
-                }
+                app('App\Http\Controllers\StagesController')->store($request, $profile->id);
                 return redirect('ferments')->with("success", "Profile Added successfully");
             }
             return redirect('ferments')->with("failed", "something went wrong");
         } catch (\Exception $exception) {
-            dd($exception);
+//            dd($exception);
             return abort(500);
         }
     }
@@ -96,17 +85,16 @@ class FermentationProfilesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UpdateFremantionProfileRequest $request
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFremantionProfileRequest $request, $id)
     {
         try {
             // calculate the new duration and stages count
             $newDuration = 0;
             $stagesCount = 0;
-
             for ($counter = 0; $counter < count($request->sid); $counter++) {
                 // update the stage if there's no flag to delete it
                 if ($request->isDeleted[$counter] != 1) {

@@ -33,14 +33,17 @@ class StagesController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $profileID, $counter)
+    public function store(Request $request, $profileID)
     {
-        Stages::create([
-            "profile_id" => $profileID,
-            "name" => $request->sname[$counter],
-            "temp" => $request->stemp[$counter],
-            "time" => $request->stime[$counter],
-        ]);
+        for ($counter = 0; $counter < count($request->sname); $counter++) {
+            Stages::create([
+                "profile_id" => $profileID,
+                "name" => $request->sname[$counter],
+                "temp" => $request->stemp[$counter],
+                "time" => $request->stime[$counter],
+            ]);
+        }
+
     }
 
     /**
