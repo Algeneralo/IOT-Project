@@ -160,7 +160,7 @@
     .bottompart {
         padding-bottom: 55px;
         position: relative;
-        background: rgba(28, 32, 36,1);
+        background: rgba(28, 32, 36, 1);
     }
 
     .button-section {
@@ -182,7 +182,7 @@
     .button-section li a, .btn-default {
         display: block;
         width: 100%;
-        color: rgba(39, 170, 225,1);
+        color: rgba(39, 170, 225, 1);
         text-decoration: none;
         border: 1px solid rgb(39, 170, 225);
         transition: .3s all linear;
@@ -199,7 +199,7 @@
         display: block;
         width: 100%;
         background: rgb(39, 170, 225);
-        color: rgba(255, 255, 225,1);
+        color: rgba(255, 255, 225, 1);
         text-decoration: none;
         background: rgb(39, 170, 225);
     }
@@ -299,5 +299,11 @@
     <!-- END Page Content -->
 @endsection
 @section('js')
+    <script src="{{ URL::asset('js/paho-mqtt.js') }}"></script>
+    <!-- Utility Javascript -->
+    <script src="{{ URL::asset('js/home_utility.js') }}"></script>
     @include('devices.scripts.device-status')
+    <script>
+        connect("{{$mqtt->ip}}", "{{$mqtt->port}}", "{{$mqtt->user}}", "{{$mqtt->password}}", "{{\Illuminate\Support\Facades\Auth::user()->iot_id}}");
+    </script>
 @endsection

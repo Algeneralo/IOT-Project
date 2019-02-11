@@ -167,7 +167,7 @@ MAIN CONTENT LAYOUT
                     <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="{{url("/home")}}">
                         <i class="nav-main-link-icon fa fa-paper-plane"></i>
                         <span class="nav-main-link-name">Overview</span>
-                        <span class="nav-main-link-badge badge badge-pill badge-success">5</span>
+                        <span class="nav-main-link-badge badge badge-pill badge-success">2</span>
                     </a>
                 </li>
                 <li class="nav-main-heading">My Devices</li>

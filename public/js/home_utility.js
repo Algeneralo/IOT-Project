@@ -25,9 +25,8 @@ var connected = false;
 var currentUnit = true;
 var temporaryUnit = true;
 var targetGlobalValue = null;
-// kevin
-//var iot_id = "8285131503";
-//var iot_id = null;
+//initialize iot_id
+iot_id = null;
 
 // called when the client connects
 function onConnect(context) {
@@ -43,14 +42,15 @@ function onConnected(reconnect, uri) {
 }
 
 function onFail(context) {
-  console.log('onFail');
+    console.log('onFail');
     connected = false;
 }
 
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
-  console.log('lost connection');
-  console.log(responseObject);
+    console.log('lost connection');
+    console.trace(responseObject);
+    console.log(responseObject);
     connected = false;
 }
 
@@ -79,22 +79,22 @@ function onMessageArrived(message) {
     if (topic === "o" && stemp === "0") {
         $(device_div).attr('data-original-title', 'Stopped!');
         $(device_div).removeClass("bg-primary").removeClass('bg-danger').removeClass('bg-success').addClass("bg-secondary");
-        $(device_div).find('.oo').attr('class','fa fa-2x fa-times-circle text-white-75 oo');
+        $(device_div).find('.oo').attr('class', 'fa fa-2x fa-times-circle text-white-75 oo');
     }
     if (topic === "o" && stemp === "1") {
         $(device_div).attr('data-original-title', 'Target Temp!');
         $(device_div).removeClass("bg-danger").removeClass('bg-primary').removeClass('bg-secondary').addClass("bg-success");
-        $(device_div).find('.oo').attr('class','fa fa-2x fa-check-circle text-white-75 oo');
+        $(device_div).find('.oo').attr('class', 'fa fa-2x fa-check-circle text-white-75 oo');
     }
     if (topic === "o" && stemp === "2") {
         $(device_div).attr('data-original-title', 'Heating!');
         $(device_div).removeClass("bg-primary").removeClass('bg-success').removeClass('bg-secondary').addClass("bg-danger");
-        $(device_div).find('.oo').attr('class','fa fa-2x fa-arrow-alt-circle-up text-white-75 oo');
+        $(device_div).find('.oo').attr('class', 'fa fa-2x fa-arrow-alt-circle-up text-white-75 oo');
     }
     if (topic === "o" && stemp === "3") {
         $(device_div).attr('data-original-title', 'Cooling!');
         $(device_div).removeClass("bg-danger").removeClass('bg-success').removeClass('bg-secondary').addClass("bg-primary");
-        $(device_div).find('.oo').attr('class','fa fa-2x fa-arrow-alt-circle-down text-white-75 oo');
+        $(device_div).find('.oo').attr('class', 'fa fa-2x fa-arrow-alt-circle-down text-white-75 oo');
     }
 
 
@@ -110,7 +110,7 @@ function connect(hostname, port, user, pass, iot_id) {
 //    var port = 20000 + prt;   // webSocketPort
 //    var clientId = 'brew-web-' + makeid();
     var clientId = iot_id;
-
+    this.iot_id = iot_id;
     var path = '/';
 //    var user = 'fsoyuhgt';
 //    var user = iot_id;
