@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::match(['get', 'post'], '/profile', 'UserController@profile');
+
     //devices Routes
     Route::resource("devices", "DeviceController");
     Route::get("/deviceFormData", "DeviceController@getFormData");

@@ -60,6 +60,7 @@
                             <th class="text-center" scope="row">{{$loop->iteration}}</th>
                             <td class="font-w600">
                                 <a href="">{{$device->name}}</a>
+                                <input class="id" name="id" value="{{$device->id}}" type="hidden">
                             </td>
                             <td class="font-w600 text-center">
                                 <a href=""><i class="fa fa-arrow-alt-circle-up text-warning"></i> 28°F</a>
@@ -75,8 +76,7 @@
                             </td>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                                            data-target="#modal-block-large" title="Edit">
+                                    <button type="button" class="btn btn-sm btn-primary edit" title="Edit">
                                         <i class="fa fa-pencil-alt"></i>
                                     </button>
                                     <form method="post" class="deleteForm"
@@ -103,6 +103,7 @@
     @include("devices.modal.edit")
 @endsection
 @section("js")
+    @include("devices.scripts.edit")
     @include("devices.scripts.delete")
 @endsection
 

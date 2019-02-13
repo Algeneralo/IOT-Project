@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Devices;
 use App\Http\Requests\StoreDeviceRequest;
+use App\Http\Requests\UpdateDeviceRequest;
 use App\MQTT;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
@@ -73,6 +74,42 @@ class DeviceController extends Controller
         return view('devices.show', compact('device', 'mqtt'));
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     * @throws \Throwable
+     */
+    public
+    function edit($id)
+    {
+        $device = Devices::where('user_id', Auth::id())->findOrfail($id);
+        $view = view("devices.modal.editSubView", compact("device"))->render();
+        return response()->json($view);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param UpdateDeviceRequest $request
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateDeviceRequest $request, $id)
+    {
+        try {
+            $device = Devices::findOrFail($id);
+            $device->name = $request->name;
+            if ($device->save()) {
+                return redirect('devices')->with("success", "Device Updated successfully");
+            }
+            return redirect('ferments')->with("failed", "something went wrong");
+        } catch (\Exception $exception) {
+            dd($exception);
+            return abort(500);
+        }
+    }
 
     /**
      * Remove the specified resource from storage.
