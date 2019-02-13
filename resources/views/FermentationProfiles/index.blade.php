@@ -121,4 +121,7 @@
     @include('FermentationProfiles.scripts.edit')
     @include('FermentationProfiles.scripts.delete')
     <script src="{{url("js/bootstrap-duration-picker.js")}}"></script>
+    <script>
+        $('.duration-picker').durationPicker();
+    </script>
 @endsection
