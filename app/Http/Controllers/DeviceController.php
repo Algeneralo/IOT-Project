@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Devices;
 use App\Http\Requests\StoreDeviceRequest;
 use App\MQTT;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 
+const INTEGRITY_CONSTRAINT_VIOLATION = 23000;
 class DeviceController extends Controller
 {
     /**
@@ -49,8 +51,11 @@ class DeviceController extends Controller
             if ($device)
                 return redirect('devices')->with("success", "Device Added successfully");
             return redirect('devices')->with("failed", "something went wrong");
+        } catch (QueryException $exception) {
+            if ($exception->getCode() == INTEGRITY_CONSTRAINT_VIOLATION)
+                return redirect('devices')->with("failed", "This device is already exists!");
+            return abort(500);
         } catch (\Exception $exception) {
-            dd($exception);
             return abort(500);
         }
     }

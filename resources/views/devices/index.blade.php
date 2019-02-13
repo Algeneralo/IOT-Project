@@ -100,7 +100,7 @@
 
         <!-- END Your Block -->
     </div>
-@include("devices.modal.edit")
+    @include("devices.modal.edit")
 @endsection
 @section("js")
     @include("devices.scripts.delete")
