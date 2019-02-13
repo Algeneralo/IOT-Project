@@ -119,16 +119,6 @@
     @include('FermentationProfiles.scripts.show')
     @include('FermentationProfiles.scripts.create')
     @include('FermentationProfiles.scripts.edit')
+    @include('FermentationProfiles.scripts.delete')
     <script src="{{url("js/bootstrap-duration-picker.js")}}"></script>
-    <script>
-
-        $('.duration-picker').durationPicker();
-
-        $(".deleteForm button").on("click", function (e) {
-            e.preventDefault();
-            if (confirm('Do you want to Delete?')) {
-                $(this).parent().submit();
-            }
-        });
-    </script>
 @endsection
