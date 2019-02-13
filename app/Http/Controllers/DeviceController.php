@@ -50,6 +50,7 @@ class DeviceController extends Controller
                 return redirect('devices')->with("success", "Device Added successfully");
             return redirect('devices')->with("failed", "something went wrong");
         } catch (\Exception $exception) {
+            dd($exception);
             return abort(500);
         }
     }
@@ -67,4 +68,21 @@ class DeviceController extends Controller
         return view('devices.show', compact('device', 'mqtt'));
     }
 
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        try {
+            if (Devices::destroy($id))
+                return redirect('devices')->with("success", "Device Deleted successfully");
+            return redirect('devices')->with("failed", "Something went wrong");
+        } catch (\Exception $exception) {
+            return abort(500);
+        }
+    }
 }
